@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAFTAR BELANJA</title>
+</head>
+<body>
+    <h1>HITUNG TOTAL BELANJAAN</h1>
+    <label for = "totalBelanjaInput">Masukkan Total Belanja (Rp): </label>
+    <input type = "number" id = "totalBelanjaInput">
+    <button id = "hitung">Hitung Harga Akhir</button>
+    <p id = "hasil"></p>
+
+    <script>
+        function hitungHargaAkhir(totalBelanja) {
+            let hargaAkhir;
+            if (totalBelanja > 1000000) {
+                const diskon = totalBelanja * 0.15;
+                hargaAkhir = totalBelanja - diskon;
+            } else if (totalBelanja > 500000) {
+                const diskon = totalBelanja * 0.10;
+                hargaAkhir = totalBelanja - diskon;
+            } else {
+                hargaAkhir = totalBelanja;
+            }
+            return hargaAkhir
+        }
+
+        const inputBelanja = document.getElementById('totalBelanjaInput');
+        const tombolhitung = document.getElementById('hitung')
+        const Hasil = document.getElementById('hasil')
+
+        tombolhitung.addEventListener('click', function() {
+            const totalBelanja = parseFloat(inputBelanja.value);
+            if (isNaN(totalBelanja) || totalBelanja < 0) {
+                Hasil.textContent = 'MASUKKAN JUMLAH YANG BENAR.';
+                return;
+            }
+            const hargaFinal = hitungHargaAkhir(totalBelanja);
+            Hasil.textContent = 'Harga Akhir: ' + hargaFinal;
+        })
+    </script>
+</body>
+</html>
