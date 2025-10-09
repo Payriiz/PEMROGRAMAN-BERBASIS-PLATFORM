@@ -1,0 +1,92 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MENCARI BULAN</title>
+</head>
+<body>
+    <script>
+        var bulan = prompt("MASUKKAN BULAN: ") 
+            switch(bulan){
+                case "1":
+                    document.write('JANUARI')
+                    break
+                case "2":
+                    document.write('FEBRUARI')
+                    break
+                case "3":
+                    document.write('MARET')
+                    break
+                case "4":
+                    document.write('APRIL')
+                    break
+                case "5":
+                    document.write('MEI')
+                    break
+                default:
+                    document.write('YANG BENER WOI')
+                    break
+            }
+
+    </script>
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Perulangan For Pada JavaScript</h1>
+
+    <button onclick = "perulangan()">TOMBOL</button> -->
+
+    <!-- id hasil -->
+     <!-- <div id = "hasil"></div>
+
+     <script>
+        function perulangan() {
+            var text = "";
+            var x;
+            for(x = 0; x <= 20; x++){
+                text += "Angka " + x + "<br>";
+            }
+
+            document.getElementById("hasil").innerHTML = text;
+        }
+     </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Perulangan For Pada Javascript</h1>
+	<button onclick="perulangan()">TOMBOL</button>	
+	<div id="hasil"></div>
+ 
+	<script>
+		function perulangan() {
+		    var s ="";
+
+            for (var i = 0; i < 5; i++) {
+                for (var j = 0; j <= i; j++) {
+                    s += "*";
+                }
+                s += "\n" + "<br>";
+            }
+            document.write(s);
+        }
+	</script>	
+</body>
+</html>

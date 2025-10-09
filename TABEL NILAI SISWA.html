@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DATA NILAI SISWA</title>
+</head>
+<body>
+    <h1>TABEL NILAI SISWA</h1>
+    <script>
+        var siswa = [
+            {nama: "Asep", tugas: 80, uts: 95, uas: 85},
+            {nama: "Iwan", tugas: 75, uts: 75, uas: 90},
+            {nama: "Cepi", tugas: 70, uts: 80, uas: 90},
+            {nama: "Agus", tugas: 65, uts: 40, uas: 55},
+            {nama: "Dadang", tugas: 60, uts: 70, uas: 60}
+        ]
+
+        function hitungNilaiAkhir(tugas, uts, uas) {
+            return (tugas * 0.4) + (uts * 0.3) + (uas * 0.3);
+        }
+        
+        let table = "<table border='1'><tr><th>Nama</th><th>Tugas</th><th>UTS</th><th>UAS</th><th>Nilai Akhir</th></tr>";
+        for (let i = 0; i < siswa.length; i++) {
+            let nilaiAkhir = hitungNilaiAkhir(siswa[i].tugas, siswa[i].uts, siswa[i].uas);
+            table += "<tr><td>" + siswa[i].nama + "</td><td>" + siswa[i].tugas + "</td><td>" + siswa[i].uts + "</td><td>" + siswa[i].uas + "</td><td>" + nilaiAkhir + "</td></tr>";
+        }
+        table += "</table>";
+        document.write(table);
+    </script>
+</body>
+</html>
