@@ -49,16 +49,37 @@
 // console.log(userData);
 
 //contoh ketiga
-function buatPemain(nama, skor) {
-    return {
-        nama,
-        skor,
-        tambahSkor(poin) {
-            this.skor += poin;
-        }
-    };
-}
+// function buatPemain(nama, skor) {
+//     return {
+//         nama,
+//         skor,
+//         tambahSkor(poin) {
+//             this.skor += poin;
+//         }
+//     };
+// }
 
-const pemain1 = buatPemain("Andi", 50);
-pemain1.tambahSkor(10);
-console.log(pemain1.skor); // Output: 60
+// const pemain1 = buatPemain("Andi", 50);
+// pemain1.tambahSkor(10);
+// console.log(pemain1.skor); // Output: 60
+
+//contoh keempat
+const karyawan = {
+    namaLengkap: "Alex Chandra",
+    jabatan: "Web Developer",
+    aktif: true,
+    tahunBergabung: 2022,
+
+    sapa: function() {
+        return "Halo, saya " + this.namaLengkap + ", seorang " + this.jabatan + ".";
+    },
+
+    masaKerja(tahunSekarang) {
+        return tahunSekarang - this.tahunBergabung;
+    }
+};
+
+const {namaLengkap, jabatan} = karyawan;
+console.log(namaLengkap); // Output: Alex Chandra
+console.log(jabatan); // Output: Web Developer
+console.log(karyawan.sapa());
