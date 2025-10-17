@@ -1,7 +1,7 @@
 const dataFilm = {
     judul: "Interstellar",
     tahunRilis: 2014,
-    sutradara: "Christoper Nolan",
+    sutradara: "Christopher Nolan",
     genre: ["Sci-Fi", "Adventure", "Drama"],
 
     tampilkanDetail: function() {
